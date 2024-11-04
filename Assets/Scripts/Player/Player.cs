@@ -36,7 +36,7 @@ namespace RoguelikeTemplate
 
         private Vector2 movement;
         private Camera cam;
-    
+
         private float chargeTime = 1;
         private Vector3 dashDirection;
         private bool invincible;
@@ -234,7 +234,7 @@ namespace RoguelikeTemplate
         {
             if (shield == null) return;
 
-            if (blockCD > 0) blockCD -= Time.deltaTime; 
+            if (blockCD > 0) blockCD -= Time.deltaTime;
             else
             {
                 if (!armed || invincible) return;
@@ -258,7 +258,7 @@ namespace RoguelikeTemplate
             CameraManager.instance.StartCoroutine(CameraManager.instance.Shake(.1f, .05f));
 
             // Steel effect
-            float multiplier = flipped ? -1: 1;
+            float multiplier = flipped ? -1 : 1;
             int actualIndex = -1;
             for (int i = 0; i < gfxComponents.Count; i++)
             {
@@ -427,7 +427,7 @@ namespace RoguelikeTemplate
             if (!armed || gameClass != GameClass.Knight) return;
 
             audioSource.Stop();
-            if (weapon!= null) weapon.Holster();
+            if (weapon != null) weapon.Holster();
             if (chargeTime > 0) CameraManager.instance.StartCoroutine(CameraManager.instance.Shake(.15f, .05f));
             chargeTime = 0;
             smokeDashEffect.Stop();
@@ -449,13 +449,13 @@ namespace RoguelikeTemplate
             int alpha;
             float time = .2f;
 
-            while(ticks > 0)
+            while (ticks > 0)
             {
                 if (blocking) break;
 
-                if (ticks % 2 == 0) 
+                if (ticks % 2 == 0)
                 {
-                    alpha = 0; 
+                    alpha = 0;
                     if (time > .06f) time -= .03f;
                 }
                 else alpha = 1;
@@ -553,7 +553,7 @@ namespace RoguelikeTemplate
             float descentFactor = .035f;
             float alpha = 1;
 
-            while(transform.localScale.x > .001f)
+            while (transform.localScale.x > .001f)
             {
                 transform.localScale -= Vector3.one * descentFactor;
                 alpha -= descentFactor;
@@ -586,7 +586,7 @@ namespace RoguelikeTemplate
         {
             canMove = !move;
             if (!canMove)
-            { 
+            {
                 rb.velocity = Vector2.zero;
                 animator.SetFloat("Speed", 0);
             }

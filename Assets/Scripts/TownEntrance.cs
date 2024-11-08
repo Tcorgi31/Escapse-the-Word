@@ -75,11 +75,17 @@ namespace RoguelikeTemplate
         private void OnTriggerEnter2D(Collider2D collision)
         {
             if (collision.GetComponent<Player>()) inRange = true;
+            LoadSurvivalRoom();
+
         }
 
         private void OnTriggerExit2D(Collider2D collision)
         {
             if (collision.GetComponent<Player>()) inRange = false;
+        }
+        public void LoadSurvivalRoom()
+        {
+            SceneManager.LoadScene("SurvivalRoom1");
         }
     }
 }

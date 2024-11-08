@@ -40,7 +40,7 @@ namespace RoguelikeTemplate
 
             StartCoroutine(EnterCO());
         }
-    
+
         public IEnumerator EnterCO()
         {
             entered = true;
@@ -172,6 +172,7 @@ namespace RoguelikeTemplate
 
         private void OnTriggerEnter2D(Collider2D collision)
         {
+            Debug.Log("Di vao tu");
             if (collision.GetComponent<Player>())
             {
                 if (!locked && Player.instance.gameClass == Entity.GameClass.Knight && Player.instance.dashing) Player.instance.BreakCharge();

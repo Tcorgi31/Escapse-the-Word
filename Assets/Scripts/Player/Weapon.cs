@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace RoguelikeTemplate
+namespace Roguelike
 {
     public class Weapon : MonoBehaviour
     {
@@ -81,7 +81,7 @@ namespace RoguelikeTemplate
             if (holstered || !wielder.canMove) return;
 
             // Angle bullshit
-            pivotAngle = pivotPoint.rotation.eulerAngles.z -(recoverAngle * Alternate());
+            pivotAngle = pivotPoint.rotation.eulerAngles.z - (recoverAngle * Alternate());
 
             mouseAngle = GameManager.instance.AngleBetweenTwoPoints(pivotPoint.position, Camera.main.ScreenToWorldPoint(Input.mousePosition));
             checkAngle = pivotAngle - mouseAngle;
@@ -269,7 +269,7 @@ namespace RoguelikeTemplate
 
             int projectilesShot = 0;
             int projectilesToShoot = target == Player.instance.transform ? 2 : 3;
-            while(projectilesShot < projectilesToShoot)
+            while (projectilesShot < projectilesToShoot)
             {
                 yield return new WaitForSeconds(burstInterval);
 

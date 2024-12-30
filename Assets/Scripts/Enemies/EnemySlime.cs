@@ -2,7 +2,7 @@
 using UnityEngine;
 
 
-namespace RoguelikeTemplate
+namespace Roguelike
 {
 
     public class EnemySlime : Enemy

@@ -1,8 +1,8 @@
- using System.Collections;
+using System.Collections;
 using UnityEngine;
 
 
-namespace RoguelikeTemplate
+namespace Roguelike
 {
     public class BossNecromancer : Enemy
     {
@@ -91,7 +91,7 @@ namespace RoguelikeTemplate
             else
             {
                 // Summon
-                if (summonCD <= 0) 
+                if (summonCD <= 0)
                 {
                     SummonEnemies();
                     StartCoroutine(SpinScythe());

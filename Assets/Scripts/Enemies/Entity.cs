@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 
 
-namespace RoguelikeTemplate
+namespace Roguelike
 {
 
     public class Entity : MonoBehaviour
@@ -82,7 +82,7 @@ namespace RoguelikeTemplate
             shaderWhite = Shader.Find("GUI/Text Shader");
             if (spriteRenderer != null) shaderDefault = spriteRenderer.material.shader;
 
-            if (gfxComponents.Count > 0 )
+            if (gfxComponents.Count > 0)
             {
                 handL = gfxComponents[2].transform;
                 handR = gfxComponents[3].transform;
@@ -137,7 +137,7 @@ namespace RoguelikeTemplate
                 }
                 else audioSource.clip = hitEffect;
             }
-        
+
             // Hit Effect
             foreach (SpriteRenderer sh in gfxComponents)
                 sh.material.shader = shaderWhite;
@@ -162,7 +162,7 @@ namespace RoguelikeTemplate
             {
                 // Hit Effect
                 StartCoroutine(Shake(.075f, .3f));
-                if (spriteRenderer != null) 
+                if (spriteRenderer != null)
                     spriteRenderer.material.shader = shaderWhite;
                 CancelInvoke("Default");
                 Invoke("Default", .4f);

@@ -2,7 +2,7 @@ using System.Collections;
 using UnityEngine;
 
 
-namespace RoguelikeTemplate
+namespace Roguelike
 {
 
     public class Hazard : MonoBehaviour
@@ -10,7 +10,7 @@ namespace RoguelikeTemplate
         public bool dealsDamage = false;
         public bool knockback;
         public int damage = 2;
-    
+
         private void OnTriggerStay2D(Collider2D other)
         {
             if (!dealsDamage) return;
@@ -45,7 +45,7 @@ namespace RoguelikeTemplate
 
                     return;
                 }
-                
+
                 else if (entity is EnemyKnight) entity.GetComponent<EnemyKnight>().TakeDamage(damageTaken);
                 else if (entity is EnemyArcher) entity.GetComponent<EnemyArcher>().TakeDamage(damageTaken);
                 else if (entity is EnemyMage) entity.GetComponent<EnemyMage>().TakeDamage(damageTaken);

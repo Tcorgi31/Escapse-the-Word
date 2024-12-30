@@ -5,7 +5,7 @@ using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
 
-namespace RoguelikeTemplate
+namespace Roguelike
 {
 
     public class ClassCard : MonoBehaviour, IPointerClickHandler, IPointerEnterHandler, IPointerExitHandler
@@ -146,7 +146,7 @@ namespace RoguelikeTemplate
             // Right card is selected - slide center card Left
             int direction = 1;
             if (position > 0) direction = -1;
-        
+
             neighbourCards[0].StartCoroutine(neighbourCards[0].SlideOffScreen(direction));
             neighbourCards[1].StartCoroutine(neighbourCards[1].SlideOffScreen(neighbourCards[1].position));
 
@@ -315,7 +315,7 @@ namespace RoguelikeTemplate
             chooseButton.gameObject.SetActive(true);
             transform.localPosition = startPosition;
             transform.localScale = Vector3.one;
-        
+
             // Flip
             front.SetActive(true);
             back.SetActive(false);

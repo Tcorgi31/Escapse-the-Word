@@ -4,7 +4,7 @@ using System.Security.Cryptography;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-namespace RoguelikeTemplate
+namespace Roguelike
 {
 
     public class DungeonEntrance : MonoBehaviour

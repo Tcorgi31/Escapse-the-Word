@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 
-namespace RoguelikeTemplate
+namespace Roguelike
 {
 
     public class CameraManager : MonoBehaviour

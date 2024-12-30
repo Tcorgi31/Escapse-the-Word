@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace RoguelikeTemplate
+namespace Roguelike
 {
 
     public class EnemyKnight : Enemy

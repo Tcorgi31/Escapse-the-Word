@@ -5,7 +5,7 @@ using UnityEngine;
 using UnityEngine.UI;
 
 
-namespace RoguelikeTemplate
+namespace Roguelike
 {
     public class Room : MonoBehaviour
     {
@@ -218,7 +218,7 @@ namespace RoguelikeTemplate
             int startPositionIndex = positionIndex;
             int nextBatch = spawnIndex + waves[currentWave];
 
-            while(spawnIndex < nextBatch)
+            while (spawnIndex < nextBatch)
             {
                 // Spawn indicators first
                 GameObject indicator = Instantiate(spawnIndicatorPrefab, spawnPositions[positionIndex].position, Quaternion.identity);

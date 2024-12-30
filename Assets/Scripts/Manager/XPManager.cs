@@ -3,8 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace RoguelikeTemplate
-{ 
+namespace Roguelike
+{
 
     public class XPManager : MonoBehaviour
     {
@@ -61,11 +61,11 @@ namespace RoguelikeTemplate
             // Choose on stats preset depending on current level
             StatsUp statsToAdd = ScriptableObject.CreateInstance<StatsUp>();
 
-            if (currentLevel %3 == 0) // Every third level do a medium boost
+            if (currentLevel % 3 == 0) // Every third level do a medium boost
             {
                 statsToAdd.SetStats(2, 2, 0, 0, 0, 0);
             }
-            else if (currentLevel %5 == 0) // Every fifth level do a large boost
+            else if (currentLevel % 5 == 0) // Every fifth level do a large boost
             {
                 statsToAdd.SetStats(3, 2, 1, 20, 5, 0);
             }

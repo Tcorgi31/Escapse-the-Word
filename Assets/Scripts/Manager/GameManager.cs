@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
-namespace RoguelikeTemplate
+namespace Roguelike
 {
     public class GameManager : MonoBehaviour
     {

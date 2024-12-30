@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
-namespace RoguelikeTemplate
+namespace Roguelike
 {
 
     public class Trail : Hazard
@@ -32,7 +32,7 @@ namespace RoguelikeTemplate
             // Satanic circles specific - wait a second before activating trap
             yield return new WaitForSeconds(.3f);
             dealsDamage = true;
-        
+
             // Destroy after livetime is over
             Invoke("DisappearEffect", liveTime);
             Destroy(gameObject, liveTime + 1);

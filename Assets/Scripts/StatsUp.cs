@@ -3,11 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
-namespace RoguelikeTemplate
+namespace Roguelike
 {
 
 
-    [CreateAssetMenu(fileName ="New StatsUp", menuName ="New StatsUp")]
+    [CreateAssetMenu(fileName = "New StatsUp", menuName = "New StatsUp")]
     public class StatsUp : ScriptableObject
     {
         public int health;

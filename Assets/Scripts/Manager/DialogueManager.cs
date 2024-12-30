@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 
 
-namespace RoguelikeTemplate
+namespace Roguelike
 {
 
     public class DialogueManager : MonoBehaviour
@@ -80,7 +80,7 @@ namespace RoguelikeTemplate
                 }
                 PromptChat(false); // Hide ChatBox
 
-                return; 
+                return;
             }
 
             StartCoroutine(ChatboxTextType(phrases[currentPhrase])); // Tyepwriter effect
@@ -90,7 +90,7 @@ namespace RoguelikeTemplate
         {
             audioSource.Play();
             chatText.text = "";
-            List<char> phraseChars = new List<char>(phrase.ToCharArray()); 
+            List<char> phraseChars = new List<char>(phrase.ToCharArray());
             writingText = true;
 
             // Select icon

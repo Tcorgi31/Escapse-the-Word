@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
-namespace RoguelikeTemplate
+namespace Roguelike
 {
 
     public class Projectile : MonoBehaviour
@@ -40,7 +40,7 @@ namespace RoguelikeTemplate
         {
             if (dealsDamage && !pooled)
             {
-                if (homingTime > 0 && homingTarget != null) 
+                if (homingTime > 0 && homingTarget != null)
                 {
                     // Rotate towards target
                     targetAngle = GameManager.instance.AngleBetweenTwoPoints(transform.position, homingTarget.position);
@@ -69,7 +69,7 @@ namespace RoguelikeTemplate
                     //Physics2D.IgnoreCollision(parentWeapon.wielder.coreCollider, coreCollider, false);
                     //Physics2D.IgnoreCollision(parentWeapon.wielder.triggerCollider, coreCollider, false);
                 }
-            
+
                 Splash();
                 trailEffect.Stop();
                 parentWeapon = null;
@@ -120,7 +120,7 @@ namespace RoguelikeTemplate
             else if (collision.TryGetComponent(out TreasureChest chest))
             {
                 chest.Open();
-                if (!pooled) Pool(true); 
+                if (!pooled) Pool(true);
             }
 
             if (collision.TryGetComponent(out Weapon weapon) && weapon.isAttacking && weapon != parentWeapon) // Deflection
@@ -136,7 +136,7 @@ namespace RoguelikeTemplate
                 }
                 else// Magic 
                 {
-                    if (!pooled) Pool(true); 
+                    if (!pooled) Pool(true);
                 }
             }
         }

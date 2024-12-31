@@ -447,6 +447,21 @@ PrefabInstance:
       propertyPath: soundToggle
       value: 
       objectReference: {fileID: 419059085}
+    - target: {fileID: 4714091797256509124, guid: ce71063a382345447bcc685fdd1ef2cd,
+        type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4714091797256509124, guid: ce71063a382345447bcc685fdd1ef2cd,
+        type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4714091797256509124, guid: ce71063a382345447bcc685fdd1ef2cd,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 20
+      objectReference: {fileID: 0}
     - target: {fileID: 7164687947625991518, guid: ce71063a382345447bcc685fdd1ef2cd,
         type: 3}
       propertyPath: m_AnchorMax.x

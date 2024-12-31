@@ -39,29 +39,48 @@ namespace Roguelike
 
         public void MusicToggle()
         {
+            GameObject checkMark = musicToggle.transform.GetChild(0).GetChild(0).gameObject;
+            RectTransform checkMarkRect = checkMark.GetComponent<RectTransform>();
+            Sprite Background = musicToggle.transform.GetChild(0).GetComponent<Image>().sprite;
             if (musicToggle.isOn)
             {
-                musicToggle.image.sprite = off;
+                Background = off;
                 musicOn = false;
+                checkMarkRect.anchorMax = new Vector2(0f, 0.5f);
+                checkMarkRect.anchorMin = new Vector2(0f, 0.5f);
+                checkMarkRect.anchoredPosition = new Vector3(20f, 0f, 0f);
+
             }
             else
             {
-                musicToggle.image.sprite = on;
+                Background = on;
                 musicOn = true;
+                checkMarkRect.anchorMax = new Vector2(1f, 0.5f);
+                checkMarkRect.anchorMin = new Vector2(1f, 0.5f);
+                checkMarkRect.anchoredPosition = new Vector3(-20f, 0f, 0f);
             }
         }
 
         public void SoundToggle()
         {
+            GameObject checkMark = soundToggle.transform.GetChild(0).GetChild(0).gameObject;
+            RectTransform checkMarkRect = checkMark.GetComponent<RectTransform>();
+            Sprite Background = soundToggle.transform.GetChild(0).GetComponent<Image>().sprite;
             if (soundToggle.isOn)
             {
-                soundToggle.image.sprite = off;
+                Background = off;
                 soundOn = false;
+                checkMarkRect.anchorMax = new Vector2(0f, 0.5f);
+                checkMarkRect.anchorMin = new Vector2(0f, 0.5f);
+                checkMarkRect.anchoredPosition = new Vector3(20f, 0f, 0f);
             }
             else
             {
-                soundToggle.image.sprite = on;
+                Background = on;
                 soundOn = true;
+                checkMarkRect.anchorMax = new Vector2(0f, 0.5f);
+                checkMarkRect.anchorMin = new Vector2(0f, 0.5f);
+                checkMarkRect.anchoredPosition = new Vector3(20f, 0f, 0f);
             }
         }
     }

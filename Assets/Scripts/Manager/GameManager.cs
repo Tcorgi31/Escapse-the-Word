@@ -175,7 +175,7 @@ namespace Roguelike
         public void PromptClass()
         {
             classScreen.SetActive(true);
-            classScreen.transform.GetChild(0).gameObject.SetActive(true); // Enable Text
+            // classScreen.transform.GetChild(0).gameObject.SetActive(true); // Enable Text
             classScreen.transform.GetChild(0).localPosition = Vector3.zero; // Reset Text Position
             classScreen.transform.localPosition = Vector3.right * -2000;
             for (int i = 0; i < classCards.Length; i++) classCards[i].ResetUI();

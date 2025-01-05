@@ -60,9 +60,9 @@ namespace Roguelike
         void Update()
         {
             // Select Class from shortcut
-            //if (Input.GetKeyDown(KeyCode.U)) classCards[0].GiveStats(); // Knight
-            //if (Input.GetKeyDown(KeyCode.I)) classCards[1].GiveStats(); // Archer 
-            //if (Input.GetKeyDown(KeyCode.O)) classCards[2].GiveStats(); // Mage
+            if (Input.GetKeyDown(KeyCode.U)) classCards[0].GiveStats(); // Knight
+            if (Input.GetKeyDown(KeyCode.I)) classCards[1].GiveStats(); // Archer 
+            if (Input.GetKeyDown(KeyCode.O)) classCards[2].GiveStats(); // Mage
         }
 
         public float AngleBetweenTwoPoints(Vector2 from, Vector2 to)

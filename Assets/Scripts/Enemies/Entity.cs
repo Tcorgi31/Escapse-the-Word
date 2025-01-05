@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 namespace Roguelike
 {
-
+    // This class is base of all Characters in the game (Player, Enemies)
     public class Entity : MonoBehaviour
     {
         public enum GameClass { Knight, Archer, Wizard, Monster }

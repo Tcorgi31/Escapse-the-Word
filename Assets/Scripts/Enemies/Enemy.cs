@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 namespace Roguelike
 {
-
+    // This is the base class for all enemies
     public class Enemy : Entity
     {
         public GameObject[] possibleLoot;

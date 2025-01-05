@@ -6,7 +6,7 @@ using UnityEngine;
 namespace Roguelike
 {
 
-
+    // This class is used to store the stats of the player
     [CreateAssetMenu(fileName = "New StatsUp", menuName = "New StatsUp")]
     public class StatsUp : ScriptableObject
     {

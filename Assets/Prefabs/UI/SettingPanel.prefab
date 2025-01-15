@@ -165,7 +165,7 @@ GameObject:
   - component: {fileID: 8600238003337236132}
   - component: {fileID: 3484454757869588882}
   m_Layer: 5
-  m_Name: Toggle
+  m_Name: SoundToggle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -198,7 +198,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1057013255936977702}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9085046f02f69544eb97fd06b6048fe2, type: 3}
   m_Name: 
@@ -250,7 +250,7 @@ GameObject:
   - component: {fileID: 3332043307390191975}
   - component: {fileID: 415466983325918752}
   m_Layer: 5
-  m_Name: Toggle
+  m_Name: MusicToggle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1005,7 +1005,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: 20, y: 0}
+  m_AnchoredPosition: {x: 19, y: 0}
   m_SizeDelta: {x: 40, y: 40}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6546746090676316149
@@ -1064,7 +1064,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &8298170434751770734
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1136,3 +1136,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   closeBtn: {fileID: 7814607350771745719}
+  musicToggle: {fileID: 415466983325918752}
+  soundToggle: {fileID: 3484454757869588882}
+  on: {fileID: 21300000, guid: 568365434fbdd4e4aa73860a83da8b81, type: 3}
+  off: {fileID: 21300000, guid: c3a67106c5f6e4f46a8e818ad77babf3, type: 3}
+  musicBackground: {fileID: 3777083199325812071}
+  soundBackground: {fileID: 3126882166762465449}
+  musicCheckMark: {fileID: 4714091797256509124}
+  soundCheckMark: {fileID: 7164687947625991518}

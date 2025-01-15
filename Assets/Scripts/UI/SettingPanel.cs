@@ -1,3 +1,4 @@
+using System.ComponentModel.Design;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -10,6 +11,12 @@ namespace Roguelike
         [SerializeField] Toggle soundToggle;
         [SerializeField] Sprite on;
         [SerializeField] Sprite off;
+
+        [SerializeField] Image musicBackground;
+        [SerializeField] Image soundBackground;
+
+        [SerializeField] RectTransform musicCheckMark;
+        [SerializeField] RectTransform soundCheckMark;
 
         bool musicOn;
 
@@ -39,48 +46,38 @@ namespace Roguelike
 
         public void MusicToggle()
         {
-            GameObject checkMark = musicToggle.transform.GetChild(0).GetChild(0).gameObject;
-            RectTransform checkMarkRect = checkMark.GetComponent<RectTransform>();
-            Sprite Background = musicToggle.transform.GetChild(0).GetComponent<Image>().sprite;
+
+
             if (musicToggle.isOn)
             {
-                Background = off;
+                musicCheckMark.anchoredPosition = new Vector2(20f, 0f);
+                musicBackground.sprite = off;
                 musicOn = false;
-                checkMarkRect.anchorMax = new Vector2(0f, 0.5f);
-                checkMarkRect.anchorMin = new Vector2(0f, 0.5f);
-                checkMarkRect.anchoredPosition = new Vector3(20f, 0f, 0f);
 
             }
             else
             {
-                Background = on;
+                musicCheckMark.anchoredPosition = new Vector3(72f, 0f);
+                musicBackground.sprite = on;
                 musicOn = true;
-                checkMarkRect.anchorMax = new Vector2(1f, 0.5f);
-                checkMarkRect.anchorMin = new Vector2(1f, 0.5f);
-                checkMarkRect.anchoredPosition = new Vector3(-20f, 0f, 0f);
             }
         }
 
         public void SoundToggle()
         {
-            GameObject checkMark = soundToggle.transform.GetChild(0).GetChild(0).gameObject;
-            RectTransform checkMarkRect = checkMark.GetComponent<RectTransform>();
-            Sprite Background = soundToggle.transform.GetChild(0).GetComponent<Image>().sprite;
+
+
             if (soundToggle.isOn)
             {
-                Background = off;
+                soundCheckMark.anchoredPosition = new Vector2(20f, 0f);
+                soundBackground.sprite = off;
                 soundOn = false;
-                checkMarkRect.anchorMax = new Vector2(0f, 0.5f);
-                checkMarkRect.anchorMin = new Vector2(0f, 0.5f);
-                checkMarkRect.anchoredPosition = new Vector3(20f, 0f, 0f);
             }
             else
             {
-                Background = on;
+                soundCheckMark.anchoredPosition = new Vector3(72f, 0f);
+                soundBackground.sprite = on;
                 soundOn = true;
-                checkMarkRect.anchorMax = new Vector2(0f, 0.5f);
-                checkMarkRect.anchorMin = new Vector2(0f, 0.5f);
-                checkMarkRect.anchoredPosition = new Vector3(20f, 0f, 0f);
             }
         }
     }
